@@ -16,7 +16,8 @@ class LaravelElevenLabsServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('laravel-elevenlabs')
-            ->hasConfigFile();
+            ->hasConfigFile('elevenlabs')
+            ->hasRoute('elevenlabs');
     }
 
     public function packageRegistered(): void
