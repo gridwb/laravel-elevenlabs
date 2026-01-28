@@ -26,6 +26,7 @@ class ConversationResponse extends AbstractResponse
         public Status $status,
         #[DataCollectionOf(ConversationResponseTranscript::class)]
         public Collection $transcript,
+        public ConversationResponseMetadata $metadata,
         #[MapInputName('has_audio')]
         #[MapOutputName('has_audio')]
         public bool $hasAudio,
