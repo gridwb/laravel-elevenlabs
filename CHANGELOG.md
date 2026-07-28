@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-elevenlabs` will be documented in this file.
 
+## 1.2.0 - 2026-07-29
+
+- added tokens resource
+
 ## 1.1.1 - 2026-01-28
 
 - added metadata for conversation details

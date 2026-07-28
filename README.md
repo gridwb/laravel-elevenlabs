@@ -7,6 +7,7 @@ Laravel ElevenLabs is a convenient wrapper for interacting with the ElevenLabs A
 - [Installation](#installation)
 - [Usage](#usage)
     - [Conversations Resource](#conversations-resource)
+    - [Tokens Resource](#tokens-resource)
     - [Webhooks](#webhooks)
 - [Testing](#testing)
 - [Changelog](#changelog)
@@ -113,6 +114,24 @@ use Gridwb\LaravelElevenLabs\Facades\ElevenLabs;
 $agentId = '<string>';
 
 $response = ElevenLabs::conversations()->getToken($agentId);
+
+echo $response->token;
+```
+
+### `Tokens` Resource
+
+#### `create single use token`
+
+Create single use token request:
+
+```php
+<?php
+
+use Gridwb\LaravelElevenLabs\Facades\ElevenLabs;
+
+$tokenType = 'realtime_scribe';
+
+$response = ElevenLabs::tokens()->createSingleUseToken($tokenType);
 
 echo $response->token;
 ```
